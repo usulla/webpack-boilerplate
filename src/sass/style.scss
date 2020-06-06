@@ -1,0 +1,85 @@
+//layout
+@import "./variables.scss";
+@import "./fonts.scss";
+
+// styles
+@import "utils/accept_cookie.scss";
+@import "components/header.scss";
+
+html {
+  box-sizing: border-box;
+  font-size: 20px;
+
+  @media (max-width: $mobile) {
+    font-size: 16px;
+  }
+  @media (min-width: $mobile+1) and (max-width: $tablet) {
+    font-size: 16px;
+  }
+  @media (min-width: $tablet+1) and (max-width: $tablet_l) {
+    font-size: 14px;
+  }
+  @media (min-width: $tablet_l+1) and (max-width: $laptop) {
+    font-size: 16px;
+  }
+  @media (min-width: $laptop+1) and (max-width: $desktop) {
+    font-size: 16px;
+  }
+  @media (min-width: $desktop+1) and (max-width: $desktop_l) {
+    font-size: 20px;
+  }
+  @media (min-width: $desktop_l+1) {
+    font-size: 20px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  background: $gray_light;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $font;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+header {
+  background: $green;
+}
+footer {
+  background: $green_light;
+  height: 200px;
+}
+header,
+footer,
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+article {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
